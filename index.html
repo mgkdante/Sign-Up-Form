@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="left-side">
+            <div class="left-side-content">
+                <img src="logo.png" alt="logo-image" class="logo">
+            </div>
+        </div>
+        <div class="right-side">
+            <h2 class="description-text">This is just a proof of concept created by Yesid! <br> You can try this out to test input validation and styling <br> Just <em>give</em> it a try ;)</h2>
+            <div class="right-side-content">
+                <h1>Sign Up</h1>
+                <form action="#" method="post">
+                    <div class="form-name">
+                        <div class="form-inputs">
+                            <label for="name">First Name</label>
+                            <input type="text" name="name" id="name" placeholder="Enter your first name" >
+                        </div>
+                        <div class="form-inputs">
+                            <label for="name">Last Name</label>
+                            <input type="text" name="name" id="name" placeholder="Enter your last name" >
+                        </div>
+                    </div>
+                    <div class="form-email-phone">
+                        <div class="form-inputs">
+                            <label for="email">*Email</label>
+                            <input type="email" name="email" id="email" placeholder="Enter your email" pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" required>
+                        </div>
+                        <div class="form-inputs">
+                            <label for="phone">Phone</label>
+                            <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" pattern="\+?[\d]{5,40}">
+                        </div>
+                    </div>
+                    <div class="form-password">
+                        <div class="form-inputs">
+                            <label for="password">*Password</label>
+                            <input type="password" name="password" id="password" placeholder="Enter your password" required minlength="8">
+                        </div>
+                        <div class="form-inputs">
+                            <label for="password">*Confirm Password</label>
+                            <input type="password" name="password" id="password" placeholder="Confirm your password" required minlength="8">
+                        </div>
+                    </div>
+                    <div class="form-submit">
+                        <input type="submit" value="Sign Up" class="sign-up">
+                    </div>
+                </form>
+                <p>Already have an account? <a href="#">Login</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
