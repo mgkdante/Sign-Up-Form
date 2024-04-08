@@ -1,10 +1,14 @@
-let passwordField = document.getElementById('password')
-let confirmPasswordField = document.getElementById('confirm-password')
-let rs = getComputedStyle(document.querySelector(':root'))
-let inputField = document.getElementsByClassName("input-field")
+let password = document.getElementById('password')
+let confirm_password = document.getElementById('confirm-password')
 
-confirmPasswordField.addEventListener("change", () => {
-    if(confirmPasswordField.value !== passwordField.value){
-        confirmPasswordField.style.borderColor = rs.getPropertyValue("--secondary-color")
-    }
-})
+
+validatePassword = () => {
+  if(password.value !== confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
