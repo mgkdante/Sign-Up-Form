@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -33,34 +34,34 @@
                     <li>
                         <div class="input-field">
                             <label for="first-name">First Name<span aria-required="true">*</span></label>
-                            <input type="text" name="first-name" id="first-name" pattern="^[a-zA-Z]+$" required>
+                            <input type="text" name="first-name" id="first-name" pattern="^[a-zA-Z]+$" placeholder="John" required>
                         </div>
                         <div class="input-field">
                             <label for="last-name">Last Name<span aria-required="true">*</span></label>
-                            <input type="text" name="last-name" id="last-name" pattern="^[a-zA-Z]+$" required>
+                            <input type="text" name="last-name" id="last-name" pattern="^[a-zA-Z]+$" placeholder="Smith" required>
                         </div>
                     </li>
                     <li>
                         <div class="input-field">
                             <label for="email">Email<span aria-required="true">*</span></label>
-                            <input type="email" name="email" id="email" pattern="^[a-zA-Z]+$" required>
+                            <input type="email" name="email" id="email" pattern="^[a-zA-Z]+$" placeholder="abc@def.com" required>
                         </div>
                         <div class="input-field">
                             <label for="phone">Phone</label>
-                            <input type="tel" name="phone" id="phone" pattern="^[0-9]{9}$">
+                            <input type="tel" name="phone" id="phone" pattern="^[0-9]{10}$" placeholder="0123456789">
                         </div>
                     </li>
                     <li>
                         <div class="input-field">
                             <label for="password">Password<span aria-required="true">*</span></label>
-                            <input type="password" name="password" id="password" minlength="8" maxlength="20"
+                            <input type="password" name="password" id="password" minlength="8" maxlength="20" placeholder="8 to 20 characters"
                                    required>
                         </div>
                         <div class="input-field">
                             <label for="confirm-password">Confirm Password<span
                                     aria-required="true">*</span></label>
                             <input type="password" name="password" id="confirm-password" minlength="8"
-                                   maxlength="20"
+                                   maxlength="20" placeholder="8 to 20 characters"
                                    required>
                         </div>
                     </li>

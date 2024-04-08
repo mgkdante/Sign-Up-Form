@@ -1,114 +1,87 @@
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
+@font-face {
+    font-family: space-grotesk;
+    src: url("space-gotresk.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Global Styles */
 *, *::before, *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-/*
-  2. Remove default margin
-*/
+
 * {
-  margin: 0;
+    margin: 0;
 }
-/*
-  Typographic tweaks!
-  3. Add accessible line-height
-  4. Improve text rendering
-*/
+
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
-/*
-  5. Improve media defaults
-*/
+
 img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+    display: block;
+    max-width: 100%;
 }
-/*
-  6. Remove built-in form typography styles
-*/
+
 input, button, textarea, select {
-  font: inherit;
+    font: inherit;
 }
-/*
-  7. Avoid text overflows
-*/
+
 p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
+    overflow-wrap: break-word;
 }
-/*
-  8. Create a root stacking context
-*/
+
 #root, #__next {
-  isolation: isolate;
+    isolation: isolate;
 }
 
-
-
-
-
-
-:root{
+/* Color Variables */
+:root {
     --primary-color: #1e50bd;
     --secondary-color: #f55a58;
     --accent-color: #8c96ac;
     --text-color: #ffffff;
+    --valid: #6a976b;
 }
 
-h1{
+/* Typography */
+h1 {
     color: var(--primary-color);
-    font-size: 2rem;
+    font-family: 'space-grotesk', serif;
+    font-size: 3rem;
 }
 
-h2{
+h2 {
     color: var(--secondary-color);
 }
 
-#sign-up-container{
+/* Layout */
+#sign-up-container {
     display: flex;
     flex-direction: row;
     height: 100vh;
 }
 
-aside{
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex: 1 1 auto;
-    width: 20%;
     background: url("bg.jpeg") no-repeat center / cover;
 }
 
-#aside-header{
-    display: flex;
-    background-color: rgba(255, 255, 255, 0.5);
-    align-items: center;
-    justify-content: center;
-    margin-top: 20rem;
-    height: 220px;
-}
-
-#logo{
-    width:  100px;
-    height: 100px;
-}
-
-section{
+section {
     display: flex;
     flex-direction: column;
-    flex: 2 1 auto;
+    flex: 3 1 auto;
     align-items: start;
     justify-content: center;
     background: #f1f0fc;
 }
 
-#form-header{
-    padding-left: 3rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
-    max-width: 600px;
-}
-
-main{
+main {
     box-shadow: 2px 5px 5px #ff8383;
     padding-left: 3rem;
     padding-right: 2rem;
@@ -117,22 +90,55 @@ main{
     width: 100%;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Form Styles */
+#form-header, ul {
+    padding-left: 3rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
     max-width: 600px;
 }
 
-label{
-    display: block;
+form{
+    margin-top: 2rem;
 }
 
-.input-field{
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.input-field {
     float: left;
     margin-right: 4rem;
 }
 
-button[type="submit"]{
+input{
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+input:user-invalid{
+    border-color: var(--secondary-color);
+}
+
+
+input:user-valid {
+    border-color: var(--valid);
+}
+
+input:placeholder-shown{
+    border-color: #ccc;
+}
+
+input:focus {
+    border-color: #1e50bd;
+    outline: none;
+}
+
+button[type="submit"] {
     background-color: var(--primary-color);
     color: var(--text-color);
     padding: 0.5rem 1rem;
@@ -141,17 +147,35 @@ button[type="submit"]{
     cursor: pointer;
     margin-top: 1rem;
     box-shadow: 2px 5px 5px #ff8383;
+    float: left;
+    margin-right: 4rem;
 }
 
+/* Other Styles */
+#aside-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
 
-#log-in-text{
+#logo {
+    width: 100px;
+    height: 100px;
+}
+
+label {
+    display: block;
+}
+
+#log-in-text {
     color: var(--accent-color);
     margin-top: 1rem;
     margin-left: 3rem;
 }
 
-a{
+a {
     color: var(--secondary-color);
-    text-decoration: none;
     font-size: 1rem;
 }
