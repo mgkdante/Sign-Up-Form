@@ -74,9 +74,8 @@ h2{
 
 aside{
     flex: 1 1 auto;
-    min-width: 30rem;
-    background-image: url("bg.jpeg");
-    background-position-x: -650px;
+    width: 20%;
+    background: url("bg.jpeg") no-repeat center / cover;
 }
 
 #aside-header{
