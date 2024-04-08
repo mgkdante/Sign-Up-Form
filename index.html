@@ -1,65 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Sign-up!</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="content">
-        <div class="left-side">
-            <div class="left-side-content">
-                <img src="logo.png" alt="logo-image" class="logo">
-            </div>
-        </div>
-        <div class="right-side">
-            <h2 class="description-text">This is just a proof of concept created by Yesid! <br> You can try this out to test input validation and styling <br> Just <em>give</em> it a try ;)</h2>
-            <div class="right-side-content">
-                <h1>Sign Up</h1>
-                <form action="#" method="post">
-                    <div class="form-name">
-                        <div class="form-inputs">
-                            <label for="name">First Name</label>
-                            <input type="text" name="name" id="name" placeholder="Enter your first name" >
+<div id="sign-up-container">
+    <aside>
+        <header id="aside-header">
+            <h1>The Odin Project</h1>
+            <img id="logo" src="logo.png" alt="form-logo">
+        </header>
+    </aside>
+    <section>
+        <header id="form-header">
+            <h2>
+                This is not a real online service! You know you need something like this in your life to help you
+                realize your deepest dreams
+                <br><br> You know you want to.
+            </h2>
+        </header>
+        <main>
+            <h2>Let's do this!</h2>
+            <form action="">
+                <ul>
+                    <li>
+                        <div class="input-field">
+                            <label for="first-name">First Name<span aria-required="true">*</span></label>
+                            <input type="text" name="first-name" id="first-name" pattern="^[a-zA-Z]+$" required>
                         </div>
-                        <div class="form-inputs">
-                            <label for="name">Last Name</label>
-                            <input type="text" name="name" id="name" placeholder="Enter your last name" >
+                        <div class="input-field">
+                            <label for="last-name">Last Name<span aria-required="true">*</span></label>
+                            <input type="text" name="last-name" id="last-name" pattern="^[a-zA-Z]+$" required>
                         </div>
-                    </div>
-                    <div class="form-email-phone">
-                        <div class="form-inputs">
-                            <label for="email">*Email</label>
-                            <input type="email" name="email" id="email" placeholder="Enter your email" pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" required>
+                    </li>
+                    <li>
+                        <div class="input-field">
+                            <label for="email">Email<span aria-required="true">*</span></label>
+                            <input type="email" name="email" id="email" pattern="^[a-zA-Z]+$" required>
                         </div>
-                        <div class="form-inputs">
+                        <div class="input-field">
                             <label for="phone">Phone</label>
-                            <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" pattern="\+?[\d]{5,40}">
+                            <input type="tel" name="phone" id="phone" pattern="^[0-9]{9}$">
                         </div>
-                    </div>
-                    <div class="form-password">
-                        <div class="form-inputs">
-                            <label for="password">*Password</label>
-                            <input type="password" name="password" id="password" placeholder="Enter your password" required minlength="8">
+                    </li>
+                    <li>
+                        <div class="input-field">
+                            <label for="password">Password<span aria-required="true">*</span></label>
+                            <input type="password" name="password" id="password" minlength="8" maxlength="20"
+                                   required>
                         </div>
-                        <div class="form-inputs">
-                            <label for="password">*Confirm Password</label>
-                            <input type="password" name="password" id="password" placeholder="Confirm your password" required minlength="8">
+                        <div class="input-field">
+                            <label for="confirm-password">Confirm Password<span
+                                    aria-required="true">*</span></label>
+                            <input type="password" name="password" id="confirm-password" minlength="8"
+                                   maxlength="20"
+                                   required>
                         </div>
-                    </div>
-                    <div class="form-submit">
-                        <input type="submit" value="Sign Up" class="sign-up">
-                    </div>
-                </form>
-                <p>Already have an account? <a href="#">Login</a></p>
-            </div>
-        </div>
-    </div>
+                    </li>
+                    <li>
+                        <button type="submit">Create Account</button>
+                    </li>
+                </ul>
+            </form>
+        </main>
+        <div id="log-in-text"><p>Already have an account? </p><a href="#">Log In!</a></div>
+    </section>
+</div>
+
 </body>
 
 </html>
